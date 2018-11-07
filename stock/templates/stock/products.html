@@ -1,0 +1,12 @@
+<h1>Products</h1>
+{% for product in products %}
+  <div>
+  <p><strong>Product id: {{ product.id }}</strong></p>
+  <p><strong>Product title: {{ product.title }}</strong></p>
+  {% for variant in product.variants %}
+    <p>Variant title: {{ variant.title }}</p>
+    <p>Variant id: {{ variant.id }}</p>
+    <p>Inventory quantity: {{ variant.inventory_quantity }}</p>
+  {% endfor %}
+  </div>
+{% endfor %}

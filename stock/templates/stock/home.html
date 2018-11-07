@@ -1,7 +1,14 @@
+<form action="{% url 'orders' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Create Order">
+</form>
+
+<h1>Orders</h1>
 {% for order in orders.orders %}
   <p>{{ order.id }}</p>
   <p>{{ order.email }}</p>
-  <p>Total items: {{ order.number }}</p>
+  <p>Total items{{ order.number }}</p>
   {% for item in order.line_items %}
     <p>Id: {{ item.id }}</p>
     <p>Title: {{ item.title }}</p>

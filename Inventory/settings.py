@@ -15,7 +15,23 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+ORDERS = '@catsinuniform.myshopify.com/admin/orders.json'
 
+PRODUCTS = '@catsinuniform.myshopify.com/admin/products.json'
+
+INVENTORY = '@catsinuniform.myshopify.com/admin/inventory_levels/adjust.json'
+
+SHOPIFY_SECRET_KEY = '**********************************'
+
+SHOPIFY_PWORD = '**********************************'
+
+SECRET_KEY = '**********************************'
+
+ORDERS_URL = f"https://{SHOPIFY_SECRET_KEY}:{SHOPIFY_PWORD}{ORDERS}"
+
+PRODUCTS_URL = f"https://{SHOPIFY_SECRET_KEY}:{SHOPIFY_PWORD}{PRODUCTS}"
+
+INVENTORY_URL = f"https://{SHOPIFY_SECRET_KEY}:{SHOPIFY_PWORD}{INVENTORY}"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
@@ -79,7 +95,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'stockdb',
         'USER': 'postgres',
-        'PASSWORD': 'DoxxingBae1812',
+        'PASSWORD': '**********************************',
         'HOST': 'localhost',
         'PORT': '5434',
     }
